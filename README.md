@@ -15,7 +15,7 @@ It's recommended to use virtualenv but can also work without
 1. Clone this repository:
 
     ```shell
-    git clone https://github.com/sammyklane/github-search.git
+    git clone https://github.com/sammyklan3/github-search.git
     ```
 
 2. Change into the project directory:
