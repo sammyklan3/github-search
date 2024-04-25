@@ -42,7 +42,7 @@ def main():
 
     while True:
         print(Style.RESET_ALL)
-        query = input(Fore.YELLOW + "Enter the search query (or 'exit' to quit): ")
+        query = input(f"{Fore.YELLOW}Enter the search query (or 'exit' to quit): {Fore.BLUE}{Style.BRIGHT}")
         
         if query.lower() == 'exit':
             break
@@ -54,7 +54,7 @@ def main():
             display_repositories(repositories)
             
             try:
-                choice = int(input(Fore.YELLOW + "Enter the index of the repository you want to view details for (or '0' to go back): "))
+                choice = int(input(f"{Fore.YELLOW}Enter the index of the repository you want to view details for (or '0' to go back): {Fore.BLUE}{Style.BRIGHT}"))
                 
                 if choice == 0:
                     continue
@@ -63,7 +63,7 @@ def main():
                     selected_repository = repositories[choice - 1]
                     display_repository_details(selected_repository)
                     
-                    action = input(Fore.YELLOW + "Enter 'clone' to clone the repository or 'back' to go back to the list: ")
+                    action = input(f"{Fore.YELLOW}Enter 'clone' to clone the repository or 'back' to go back to the list: {Fore.BLUE}{Style.BRIGHT}")
                     
                     if action.lower() == 'clone':
                         clone_repository(selected_repository)
